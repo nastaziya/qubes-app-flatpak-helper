@@ -1,0 +1,38 @@
+Name:		qubes-flatpak-helper
+Version:	1.0.0
+Release:	1%{?dist}
+Summary:	Helper to synchronize app menu with flatpak app icons in Qubes Vms
+
+License:	GPL	
+URL:		https://www.qubes-os.org
+Source0:	%{name}-%{version}.tar.gz
+BuildArch:	noarch
+%{?systemd_requires}
+BuildRequires: systemd
+	
+%description
+Flatpak helper to synchronize app menu with newly installed flatpak app icons in Qubes VMs. This helper consists of a service that monitor flatpak .changed file and synchronize the app menu every time a flatpak is installed/uninstalled.  
+
+%prep
+%setup -q
+
+
+%install
+%make_install
+
+%post
+%systemd_post qubes-flatpak-monitor.path
+
+%preun
+%systemd_preun qubes-flatpak-monitor.path
+
+%postun
+%systemd_postun qubes-flatpak-monitor.path
+
+%files
+%{_unitdir}/qubes-flatpak-monitor.path
+%{_unitdir}/qubes-flatpak-monitor.service
+%{_unitdir}-preset/80-qubes-flatpak.preset
+
+%changelog
+
