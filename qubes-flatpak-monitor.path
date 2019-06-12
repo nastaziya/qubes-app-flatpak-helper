@@ -1,9 +1,0 @@
-[Unit] 
-Description=Flatpak install/uninstall monitor
-ConditionPathExists=/usr/bin/flatpak
-[Path]
-PathChanged=/var/lib/flatpak/.changed
-PathChanged=/home/user/.local/share/flatpak/.changed
-[Install]
-WantedBy=multi-user.target
-
