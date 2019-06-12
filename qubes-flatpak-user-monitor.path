@@ -1,0 +1,9 @@
+[Unit] 
+Description=Flatpak install/uninstall user monitor
+ConditionPathExists=/usr/bin/flatpak
+ConditionPathExists=/var/run/qubes/this-is-appvm
+[Path]
+PathChanged=/home/user/.local/share/flatpak/.changed
+[Install]
+WantedBy=multi-user.target
+

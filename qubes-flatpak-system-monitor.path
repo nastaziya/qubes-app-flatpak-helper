@@ -1,0 +1,9 @@
+[Unit] 
+Description=Flatpak install/uninstall system monitor
+ConditionPathExists=/usr/bin/flatpak
+ConditionPathExists=/var/run/qubes/this-is-templatevm
+[Path]
+PathChanged=/var/lib/flatpak/.changed
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,5 @@
+[Unit]
+Description=Flatpak install/uninstall monitor
+[Service]
+Type=simple
+ExecStart=/etc/qubes-rpc/qubes.PostInstall
