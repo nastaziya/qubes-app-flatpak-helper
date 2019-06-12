@@ -1,6 +1,6 @@
 Name:		qubes-flatpak-helper
 Version:	1.0.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Helper to synchronize app menu with flatpak app icons in Qubes Vms
 
 License:	GPL	
@@ -35,4 +35,5 @@ Flatpak helper to synchronize app menu with newly installed flatpak app icons in
 %{_unitdir}-preset/80-qubes-flatpak.preset
 
 %changelog
-
+* Wed Jun 12 2019 Cotorobai Anastasia <cotorobai.anastasia@gmail.com> - 1.0.0-2
+- Initial flatpak helper RPM release
