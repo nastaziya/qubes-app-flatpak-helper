@@ -39,8 +39,8 @@ Flatpak helper to synchronize app menu with newly installed flatpak app icons in
 %{_unitdir}/qubes-flatpak-user-monitor.path
 %{_unitdir}/qubes-flatpak-system-monitor.service
 %{_unitdir}/qubes-flatpak-user-monitor.service
-%{_unitdir}-preset/80-qubes-system-flatpak.preset
-%{_unitdir}-preset/80-qubes-user-flatpak.preset
+%{_unitdir}-preset/80-qubes-flatpak-system.preset
+%{_unitdir}-preset/80-qubes-flatpak-user.preset
 
 %changelog
 * Wed Jun 12 2019 Cotorobai Anastasia <cotorobai.anastasia@gmail.com> - 1.0.0-2

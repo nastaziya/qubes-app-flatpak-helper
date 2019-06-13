@@ -1,5 +1,6 @@
 [Unit]
 Description=Flatpak install/uninstall monitor
 [Service]
+Environment=XDG_DATA_DIRS=/home/user/.local/share/flatpak/exports/share:/usr/local/share/:/usr/share/
 Type=simple
 ExecStart=/etc/qubes-rpc/qubes.PostInstall
